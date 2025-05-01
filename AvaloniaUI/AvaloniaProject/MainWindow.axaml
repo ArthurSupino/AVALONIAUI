@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaProject.MainWindow"
+        Title="Conversor de Unidades"
+        Width="500" Height="400">
+  <StackPanel Margin="10">
+    <!-- Título -->
+    <TextBlock Text="Conversor de Unidades"
+               FontSize="24"
+               HorizontalAlignment="Center"
+               Margin="0 0 0 20"/>
+
+    <!-- ListBox para selecionar o tipo de conversão -->
+    <TextBlock Text="Selecione o tipo de conversão:" Margin="0 0 0 5"/>
+    <ListBox x:Name="ConversionList" Height="150" Margin="0 0 0 10">
+      <ListBoxItem Content="Celsius para Fahrenheit"/>
+      <ListBoxItem Content="Fahrenheit para Celsius"/>
+      <ListBoxItem Content="Celsius para Kelvin"/>
+      <ListBoxItem Content="Kelvin para Celsius"/>
+      <ListBoxItem Content="Metros para Pés"/>
+      <ListBoxItem Content="Pés para Metros"/>
+      <ListBoxItem Content="Quilômetros para Milhas"/>
+      <ListBoxItem Content="Milhas para Quilômetros"/>
+      <ListBoxItem Content="Quilogramas para Libras"/>
+      <ListBoxItem Content="Libras para Quilogramas"/>
+      <ListBoxItem Content="Gramas para Onças"/>
+      <ListBoxItem Content="Onças para Gramas"/>
+      <ListBoxItem Content="Litros para Galões"/>
+      <ListBoxItem Content="Galões para Litros"/>
+      <ListBoxItem Content="Mililitros para Onças Fluidas"/>
+      <ListBoxItem Content="Onças Fluidas para Mililitros"/>
+    </ListBox>
+
+    <!-- Campo de entrada -->
+    <TextBlock Text="Valor de entrada:" Margin="0 0 0 5"/>
+    <TextBox x:Name="InputValue" Margin="0 0 0 10"/>
+
+    <!-- Campo de saída -->
+    <TextBlock Text="Resultado:" Margin="0 0 0 5"/>
+    <TextBox x:Name="OutputValue" IsReadOnly="True" Margin="0 0 0 10"/>
+
+    <!-- Botão para executar a conversão -->
+    <Button Content="Converter" HorizontalAlignment="Center" Width="100" Click="ConvertButton_Click"/>
+  </StackPanel>
+</Window>
